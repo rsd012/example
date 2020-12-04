@@ -136,21 +136,3 @@ class _MapEntry :
       return False
     return ( self.key == other.key and self.value == other.value )
 
-## STUDENTS WILL PUT AN ITERATOR CLASS HERE.
-
-class _HashIter():
-    def __init__(self, array):
-        self._array = [i for i in range(len(array)) if self._array[i] != None]
-        self.current = 0
-    
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.current == len(self._array):
-            raise StopIteration
-        else:
-            entry = self._array[self.current]
-            item = entry.key
-            self.current += 1
-            return item
